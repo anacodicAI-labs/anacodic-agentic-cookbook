@@ -1,0 +1,101 @@
+question,gold,pred,correct,reasoning_type,task_family,grounded,tool_calls,model,config,run
+What percentage of oocytes tested in the category 'Female carriers of structural rearrangements or monogenic disorders' had premeiotic aneuploidy?,6.66%,6.66%,1,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many oocytes with Simple Errors were contributed by donors in the category 'Oocyte preservation due to breast cancer'?,1,1,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of oocytes tested had Simple Errors in the category 'Females at increased risk of developing breast/ ovarian cancer due to BRCA1/2 gene mutations'?,0%,0%,1,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many oocytes tested had premeiotic aneuploidy in total?,25,25,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average Effect value for all entries in the table?,-0.06,-0.054,0,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the percentage of oocytes with premeiotic aneuploidy in the category of Female fertility status unknown?,14.5%,14.5%,1,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many oocytes with Simple Errors were contributed by donors in the category of Primary/secondary female factor infertility?,3,3,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of oocytes with premeiotic aneuploidy were tested in the category of Oocyte preservation due to social reasons?,4.3%,4.3%,1,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the forward primer sequence for Exon 3 & Exon 4?,ACGTAGTGCATACACCCTTG,ACGTAGTGCATACACCCTTG,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the reverse primer sequence for Exon 2?,GGAAAAGCCAAATCTAAGGTTCC,'GGAAAAGCCAAATCTAAGGTTCC,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+Which region has the forward primer sequence 'GAAACCTAATAAAGCTCCACCTTC'?,Promoter & Exon 1,Promoter & Exon 1,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the forward primer sequence for Exon 5?,GAAACAGGTTTCCTTTCCCAAG,GAAACAGGTTTCCTTTCCCAAG,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the reverse primer sequence for Promoter & Exon 1?,TTGCTCAGCATATATCTGGGGC,TTGCTCAGCATATATCTGGGGC,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the p-value for the gene Zinc finger protein 492?,1.30E-06,1.30E-06,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ transporting, alpha 3 polypeptide?",-2.28,2.28,0,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Gene Symbol for the gene with a p-value of 8.53E-03?,EGR4,EGR4,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+Which gene has the highest Fold Change (FC) magnitude in this table?,CD24,CD24,1,Identification,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Gene Name associated with the gene symbol THOP?,Thimet oligopeptidase I,(small cell lung carcinoma cluster 4 antigen) Thimet oligopeptidase I,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the current treatment for patient E1?,Steroids,Steroids,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many donors contributed oocytes with premeiotic aneuploidy in the category of Oocyte preservation due to breast cancer?,2 donors,2 donors,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of oocytes tested in the category of Females at increased risk of developing breast/ ovarian cancer due to BRCA1/2 gene mutations had premeiotic aneuploidy?,0%,0%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many oocytes had Simple (SE) Errors in the category of Female carriers of structural rearrangements or monogenic disorders?,1,1,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What was the total number of oocytes with premeiotic aneuploidy in the table?,25,25,1,Summation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many donors contributed oocytes with premeiotic aneuploidy in the table overall?,15 donors,15 donors,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Lipid species for the SNP rs201385366?,LPE(22:6;0),LPE(22:6;0),1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Effect for the SNP rs534693155?,1.24,1.24,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Position for the SNP rs11570891?,8:19822810,8:19822810,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the Gene for the SNP rs140645847?,SHTN1,SHTN1,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the P value for the SNP rs10790495?,2.1 x 10-8,2.1 x 10-8,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many donors contributed oocytes with premeiotic aneuploidy in the category 'Female fertility status unknown'?,6 donors,6 donors,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of oocytes tested in the category 'Primary/secondary female factor infertility' had premeiotic aneuploidy?,12.5%,12.5%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many oocytes had Simple (SE) Errors in the category 'Oocyte preservation due to social reasons'?,1(SE),1,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+Which category had the highest percentage of oocytes with Simple (SE) Errors?,Female fertility status unknown,Female fertility status unknown,1,Comparison,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of oocytes tested in the category 'Primary/secondary female factor infertility'?,48,48,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of variants with pre-existing personal and/or family criteria for genetic analysis in the 'Actionable genes' category?,30,30 variants,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of variants in the 'Non-actionable genes' category have more than one incidental variant?,28%,16.7%,0,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many variants in the 'Others' category have heterozygous variants of recessive conditions known before EXOMA?,1,19,0,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of 'Total' variants have analysis criteria not identified by the oncologist?,22.7%,34.6%,0,Percentage Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many variants in the 'MITF' gene have incidental variants?,4,4,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+"What is the total number of cows on farms A, B, and C?",39,398,0,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of observations for all farms in the table?,129,129,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of variables included in non-invasive measurements?,51,13,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of variables included in invasive measurements?,15,4,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average number of variables included in the invasive measurements?,3,3.75,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the difference between the total number of variables in non-invasive and invasive measurements?,36,13,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many variants were identified in the gene BRCA1?,7,7,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of variants in BRCA2 were known before EXOMA?,26.7%,26.7%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many variants with pre-existing personal and/or family criteria for genetic analysis were identified in PALB2?,2,2,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many incidental variants were found in the gene MUTYH?,NA,N/A,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of variants in CHEK2 were non-actionable?,28.6%,100%,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average number of observations per farm?,10,10.75 observations per farm,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of cows on all farms?,1513,1513,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many equations include the variable 'Age'?,14,14,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+"How many equations include the variable 'Blood pressure, Systolic'?",4,4,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many equations include the variable 'BMI'?,11,11,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many equations include the variable 'Fasting glucose'?,5,5,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many equations include the variable 'Height'?,3,3,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for LDL quantification in the LDLPuavilai study using the automated enzymatic method?,TC HDL - (TG / 6),TC HDL - (TG 6),1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many subjects had TG > 400 mg/dL in the LDLde Cordova study?,470 subjects,470,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for LDL quantification in the LDLChoi study using the automated enzymatic method?,TC 0.87 X HDL 0.13 TG,TC 0.87 X HDL 0.13 TG,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the LDL concentration equation in the LDLHattori study?,(0.94 TC) (0.94 HDL) 0.19 TG,(0.94 TC) (0.94 HDL) 0.19 TG,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of females who used to smoke often?,2,INSUFFICIENT,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average MDS-UPDRS part III score for females with no exposure to pesticides?,26.21,INSUFFICIENT,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many individuals with a Hoehn-Yahr stage of 2 have a family history of PD?,8,INSUFFICIENT,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many subjects were studied in the LDLRao research?,196 sera,196,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What was the TG concentration range in the LDLcal study?,TG ranged 20-2502 mg/dL,INSUFFICIENT,0,Fact Finding,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+Which study included 153 subjects with TG levels above 350 mg/dL?,LDLAnadara,LDLAnadaraja,1,Identification,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+"In the LDLDeLong study, how many subjects had TG levels greater than 400 mg/dL?",964 subjects,964 subjects,1,Counting,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What was the equation used for LDL quantification in the LDLVujovic study?,TC HDL (TG/ 6.58),TC HDL (TG/ 6.58),1,Fact Finding,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the mean age of participants in the P/LP/R group?,46.50+/-7.43,46.50,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many females are in the Unidentified group?,24 (52.17),24,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of participants in the Smoking group used to smoke?,8 (42.11),88%,0,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many participants have a family history of PD in the VUS group?,0,0,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the mean MDS-UPDRS part III score for participants in the Unidentified group?,31.39+/-13.20,31.39,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for carcass protein content according to Hankins and Howe?,CPcarc = 5.98+0.66xCPRS,CPcarc = 5.98 + 0.66xCPRS,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for carcass energy content according to Costa e Silva et al?,EEcarc = 4.54+0.48xEERs+0.12xOV,EEcarc = 4.54+0.48xEERs+0.12xOV,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for empty body protein content according to Costa e Silva et al?,CPEBW =19.92+0.086xCPRs-0.19xOV,CPEBW = 19.92 + 0.086 × CPRs – 0.19 × OV,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for empty body energy content according to Costa e Silva et al?,EEEBW = 3.53+0.34xEERS+0.80xVF+0.10xOV,EEEBW = 3.53+0.34xEERS+0.80xVF+0.10xOV,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the equation for whole empty body weight according to the table?,WEBW = 53.02+0.17xWRs-1.28xVF+0.27xOV,WEBW = 53.02+0.17xWRs-1.28xVF+0.27xOV,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of skewed markers for Group 3 in the One-step analysis?,5,5,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average marker distance for Group 5 in the Two-step analysis?,3.4,3.4 cM,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the total number of loci for Group 8 in the One-step analysis?,14,14,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average marker distance for Group 4 in the One-step analysis?,4.2,4.2 cM,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of Cognitively Normal Controls in EA Case-Control carry the APOE E4 gene?,14.4%,14.4%,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many AD Cases were sampled in the CHARGE WES group?,612,612,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the percentage of females in the ADES-FR WES Cognitively Normal Controls?,58%,58%,1,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many ADGC GWAS Cognitively Normal Controls were sampled?,"5,096","11,527",0,Arithmetic,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of patients in the Present Study have permanent weakness?,47%,47%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of patients in Other Studies aged 30-50 have exercise intolerance?,89%,INSUFFICIENT,0,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the difference in percentage of patients with a positive family history between Present Study and Other Studies?,28%,28%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of patients in the Present Study have CK elevation?,100%,100%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the percentage of patients with Second wind in the Present Study?,56%,56%,1,Calculation,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+Which group has the highest average marker distance in the one-step process?,G1,G8,0,Comparison,Compute,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the average age of Hispanic Enriched AD Cases in the Discovery Sample table?,75.4,75.45,0,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of Cognitively Normal Controls in the Discovery Sample table carry the APOE E4 allele?,14.4%,14.4%,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many AD Cases were included in the CHARGE WES sample in the Discovery Sample table?,61,612,0,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What is the percentage of females in the EA Case-Control group of the Discovery Sample table?,55.8%,55.8%,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+How many participants were in the ADGC GWAS sample in the Discovery Sample table?,"9,343","9,343",1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of patients in the Present Study exhibited Exercise intolerance?,100%,100%,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1
+What percentage of patients in the Other Studies exhibited Permanent weakness?,28%,28%,1,Cell Selection,Lookup,1,0,groq:openai/gpt-oss-20b,baseline,1

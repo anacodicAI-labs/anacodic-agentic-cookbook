@@ -1,0 +1,41 @@
+question,gold,pred,correct,reasoning_type,model,config
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Promoter & Exon 1?,48 nucleotides,60 nucleotides,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the difference in length between the forward and reverse primers for Exon 2?,3 nucleotides,20 nucleotides,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Exon 3 & Exon 4?,46 nucleotides,45 nucleotides,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Exon 5?,46 nucleotides,50 nucleotides,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the difference in length between the forward and reverse primers for Promoter & Exon 1?,0 nucleotides,10 nucleotides,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the average p-value for UP-regulated genes?,0.00034,Average p-value for UP-regulated genes is 0.00057,0,Calculation,chatgpt-reference,chatgpt_reference
+What is the maximum Fold Change (FC) magnitude for DOWN-regulated genes?,Maximum FC magnitude for DOWN-regulated genes is 3.23,Maximum FC magnitude for DOWN-regulated genes is 3.23,1,Identification,chatgpt-reference,chatgpt_reference
+What is the difference in FC magnitude between 'CD24 antigen' and 'EGR4' genes?,The difference in FC magnitude between the 'CD24 antigen' and 'EGR4' genes is 1.17,The difference in FC magnitude between 'CD24 antigen' and 'EGR4' genes is 0.15,1,Calculation,chatgpt-reference,chatgpt_reference
+What is the sum of the FC magnitude for the top 3 genes with the lowest p-values?,The sum of the FC magnitudes for the top 3 genes with the lowest p-values is 7.61,The sum of the FC magnitude for the top 3 genes with the lowest p-values is 6.41,1,Calculation,chatgpt-reference,chatgpt_reference
+How many genes have a FC magnitude greater than 2.5?,1 gene has an FC magnitude greater than 2.5,There are 4 genes with a FC magnitude greater than 2.5,0,Counting,chatgpt-reference,chatgpt_reference
+What is the average age at disease onset for patients with Cutaneous involvement and Musculo-skeletal disorders?,The average age at disease onset for patients with both cutaneous involvement and musculoskeletal disorders is 10.1 years.,Average age at disease onset for patients with Cutaneous involvement and Musculo-skeletal disorders is 6.6 years.,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What percentage of patients with Peripheral and central nervous system involvement have fever?,87.5% of patients with peripheral and central nervous system involvement have fever.,50% of patients with Peripheral and central nervous system involvement have fever.,0,Percentage Calculation,chatgpt-reference,chatgpt_reference
+What is the total CRP level of patients without Cutaneous involvement or Musculo-skeletal disorders?,205 mg/L,Total CRP level of patients without Cutaneous involvement or Musculo-skeletal disorders is >5.,0,Arithmetic,chatgpt-reference,chatgpt_reference
+How many patients have Ischaemic strokes and meningitis?,1 patient (E1) has both ischaemic strokes and meningitis.,2 patients have Ischaemic strokes and meningitis.,0,Count,chatgpt-reference,chatgpt_reference
+What is the most common Current treatment among the patients?,The most common Current treatment among the patients is TNF alpha blockade.,The most common Current treatment among the patients is TNF alpha blockade.,1,Most Common,chatgpt-reference,chatgpt_reference
+What percentage of oocytes tested in the category 'Female carriers of structural rearrangements or monogenic disorders' had premeiotic aneuploidy?,6.66%,6.66%,1,Percentage calculation,chatgpt-reference,chatgpt_reference
+How many oocytes with Simple Errors were contributed by donors in the category 'Oocyte preservation due to breast cancer'?,1,1,1,Counting,chatgpt-reference,chatgpt_reference
+What is the total number of donors contributing oocytes with premeiotic aneuploidy across all categories?,4 DONORS,15 donors,0,Total count,chatgpt-reference,chatgpt_reference
+What percentage of oocytes tested had Simple Errors in the category 'Females at increased risk of developing breast/ ovarian cancer due to BRCA1/2 gene mutations'?,0%,0%,1,Percentage calculation,chatgpt-reference,chatgpt_reference
+How many oocytes tested had premeiotic aneuploidy in total?,25,25,1,Total count,chatgpt-reference,chatgpt_reference
+What is the difference between the AF values of rs201385366 and rs76866386#?,0.058,0.058,1,Arithmetic,chatgpt-reference,chatgpt_reference
+"What is the product of SE values for rs10212439, rs13151374, and rs543895501?",0.000288,0.0168,0,Arithmetic,chatgpt-reference,chatgpt_reference
+"What is the sum of P values for rs8008070#, rs261290#, and rs151223356P?",1.9×10^−10,5.9 x 10^-41,0,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the ratio of Lipid species values for rs534693155 and rs3902951?,3.44,3.44,1,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the average Effect value for all entries in the table?,-0.06,-0.06,1,Arithmetic,chatgpt-reference,chatgpt_reference
+What is the percentage of oocytes with premeiotic aneuploidy in the category of Female fertility status unknown?,14.5%,14.5%,1,Percentage calculation,chatgpt-reference,chatgpt_reference
+How many oocytes with Simple Errors were contributed by donors in the category of Primary/secondary female factor infertility?,3,3,1,Counting,chatgpt-reference,chatgpt_reference
+What is the total number of donors contributing oocytes with premeiotic aneuploidy across all categories?,11 donors,11 donors,1,Summation,chatgpt-reference,chatgpt_reference
+What percentage of oocytes with premeiotic aneuploidy were tested in the category of Oocyte preservation due to social reasons?,4.3%,4.3%,1,Percentage calculation,chatgpt-reference,chatgpt_reference
+How many donors contributed oocytes in the category of Female fertility status unknown?,27 donors,27 donors,1,Counting,chatgpt-reference,chatgpt_reference
+What is the forward primer sequence for Exon 3 & Exon 4?,ACGTAGTGCATACACCCTTG,ACGTAGTGCATACACCCTTG,1,Cell Selection,chatgpt-reference,chatgpt_reference
+What is the reverse primer sequence for Exon 2?,GGAAAAGCCAAATCTAAGGTTCC,GGAAAAGCCAAATCTAAGGTTCC,1,Cell Selection,chatgpt-reference,chatgpt_reference
+Which region has the forward primer sequence 'GAAACCTAATAAAGCTCCACCTTC'?,Promoter & Exon 1,Promoter & Exon 1,1,Cell Selection,chatgpt-reference,chatgpt_reference
+What is the forward primer sequence for Exon 5?,GAAACAGGTTTCCTTTCCCAAG,GAAACAGGTTTCCTTTCCCAAG,1,Cell Selection,chatgpt-reference,chatgpt_reference
+What is the reverse primer sequence for Promoter & Exon 1?,TTGCTCAGCATATATCTGGGGC,TTGCTCAGCATATATCTGGGGC,1,Cell Selection,chatgpt-reference,chatgpt_reference
+What is the p-value for the gene Zinc finger protein 492?,1.30E-06,1.30E-06,1,Cell Selection,chatgpt-reference,chatgpt_reference
+"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ transporting, alpha 3 polypeptide?",-2.28,-2.28,1,Cell Selection,chatgpt-reference,chatgpt_reference
+What is the Gene Symbol for the gene with a p-value of 8.53E-03?,EGR4,EGR4,1,Cell Selection,chatgpt-reference,chatgpt_reference
+Which gene has the highest Fold Change (FC) magnitude in this table?,CD24,CD24,1,Max Value Identification,chatgpt-reference,chatgpt_reference
+What is the Gene Name associated with the gene symbol THOP?,Thimet oligopeptidase I,(small cell lung carcinoma cluster 4 antigen) Thimet oligopeptidase I,1,Cell Selection,chatgpt-reference,chatgpt_reference
