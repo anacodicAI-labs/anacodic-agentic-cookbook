@@ -96,6 +96,9 @@ def main():
             raise SystemExit(f"unknown config {c!r}; choose from {list(REGISTRY)}")
 
     acc = {c: [] for c in configs}
+    cost_c = {c: 0.0 for c in configs}      # spend attributable to each config
+    calls_c = {c: 0 for c in configs}       # model calls per config
+    toks_c = {c: [0, 0] for c in configs}   # [input, output] tokens
     famacc = {c: Counter() for c in configs}
     famtot = {c: Counter() for c in configs}
     last_rows = {c: [] for c in configs}
@@ -108,11 +111,15 @@ def main():
             for r in range(1, args.repeats + 1):
                 for cfg in configs:
                     fn, rows, ok = REGISTRY[cfg], [], 0
+                    cost0 = meter.cost_usd
                     for i, t in enumerate(trips, 1):
                         out = fn(t.question, t.table_csv, args.temperature)
                         if out.get("prompt_tokens"):
                             meter.record(out["model_id"], out["prompt_tokens"],
                                          out["completion_tokens"])
+                            calls_c[cfg] += 1
+                            toks_c[cfg][0] += out["prompt_tokens"]
+                            toks_c[cfg][1] += out["completion_tokens"]
                         good = int(is_correct(out["final"], t.gold, t.question))
                         ok += good
                         famtot[cfg][t.task_family] += 1
@@ -127,6 +134,7 @@ def main():
                         if i % 25 == 0:
                             print(f"    {cfg} run{r}: {i}/{len(trips)} "
                                   f"${meter.cost_usd:.4f}", flush=True)
+                    cost_c[cfg] += meter.cost_usd - cost0
                     acc[cfg].append(ok / len(trips))
                     last_rows[cfg] = rows
                     print(f"  run {r} [{cfg}] acc={ok/len(trips):.1%} "
@@ -153,6 +161,19 @@ def main():
         cp = famacc[c]['Compute'] / famtot[c]['Compute'] if famtot[c]['Compute'] else float('nan')
         print(f"[{c:8s}] overall {m:.1%}{sp}  |  Lookup {lk:.1%}  Compute {cp:.1%}"
               f"   (runs: {', '.join(f'{a:.0%}' for a in acc[c])})")
+
+    print("\n=== cost per configuration (what the agentic overhead buys) ===")
+    print(f"  {'config':12s} {'acc':>7s} {'$ total':>9s} {'calls':>7s} "
+          f"{'calls/q':>8s} {'$/question':>11s} {'acc per $':>10s}")
+    for c in configs:
+        if not acc[c]:
+            continue
+        a = statistics.mean(acc[c])
+        n = len(trips) * max(1, len(acc[c]))
+        cpq = cost_c[c] / n if n else 0.0
+        print(f"  {c:12s} {a:6.1%} {cost_c[c]:9.4f} {calls_c[c]:7d} "
+              f"{calls_c[c]/n:8.2f} {cpq:11.5f} "
+              f"{(a/cost_c[c] if cost_c[c] else float('nan')):10.1f}")
 
     if len(configs) >= 2 and all(acc[c] for c in configs):
         b = statistics.mean(acc[configs[0]])
