@@ -76,6 +76,9 @@ def main():
     ap.add_argument("--limit", type=int, default=100, help="number of questions")
     ap.add_argument("--repeats", type=int, default=1)
     ap.add_argument("--temperature", type=float, default=0.0)
+    ap.add_argument("--sample-seed", type=int, default=None,
+                    help="randomly sample --limit questions with this seed "
+                         "instead of taking the first N in file order")
     ap.add_argument("--grounded-only", action="store_true",
                     help="keep only items whose gold appears in the table")
     args = ap.parse_args()
@@ -84,6 +87,11 @@ def main():
     total_before = len(trips)
     if args.grounded_only:
         trips = [t for t in trips if t.grounded]
+    if args.sample_seed is not None:
+        # file order groups questions by source table, so the first N can all
+        # come from one table and misrepresent the benchmark
+        import random
+        random.Random(args.sample_seed).shuffle(trips)
     trips = trips[:args.limit]
     fam = Counter(t.task_family for t in trips)
     print(f"{args.domain}: {len(trips)} questions "
