@@ -1,0 +1,5 @@
+# Downloaded and derived data never enter git: the cookbook has a 5 MB file
+# ceiling, and each article carries its own licence. Re-create with the scripts.
+data/
+__pycache__/
+*.pyc
