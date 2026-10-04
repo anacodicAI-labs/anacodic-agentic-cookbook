@@ -100,8 +100,9 @@ runnable code — not a scaffold — and its own `requirements.txt`.
 | 1 | [amaresh-eval-harness](02-experiments/amaresh-eval-harness/) | Amaresh Hebbar | 06-bench | model comparison 0.94 vs 0.95 (tied); extraction quality leaderboard |
 | 2 | [maanas-chunking-eval](02-experiments/maanas-chunking-eval/) | Sai Maanas | 02-chunk | Docling Hybrid (512 tok) keeps tables intact; fixed/semantic lose the header at small budgets |
 
-Add your own folder under `02-experiments/` (an attempt) or `03-use-cases/`
-(a finished demo) — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Add your own folder under `02-experiments/` — that is the one door in for new
+work, and where every contribution starts. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the promotion path from there.
 
 ## What you get
 

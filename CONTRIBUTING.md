@@ -15,9 +15,11 @@ Please read through this document before opening an issue or a pull request.
    follow
    [`02-experiments/NOTEBOOK_STANDARD.md`](02-experiments/NOTEBOOK_STANDARD.md)
    — read it before you open a blank notebook.
-2. **Add a use case** under `03-use-cases/` — a finished, demoable application
-   of the stages.
-3. **Fix bugs, improve documentation, or clarify a README.**
+2. **Fix bugs, improve documentation, or clarify a README.**
+
+`03-use-cases/` is not a place to start. It is reserved for one thin
+demonstration that the stages compose, written by the lab. Everything else
+enters through `02-experiments/`.
 
 No contribution is too small.
 
@@ -34,7 +36,8 @@ No contribution is too small.
   05-observe/        what actually happened — cost, artifacts, tracing.
 02-experiments/    your attempts. one folder per contribution:
                      02-experiments/<your-name>-<topic>/
-03-use-cases/      finished, demoable applications. same rule: one folder.
+03-use-cases/      reserved for one thin demo that the stages compose.
+                   empty for now, by intent — see its README.
 04-benchmarks/     frozen inputs, hand-checked gold answers, and a
                    LEADERBOARD.md per benchmark.
 ```
@@ -74,15 +77,14 @@ them at once:
   them. This needs real domain judgment (a benchmark's `gold/README.md`
   states what kind) and is treated as its own contribution, not a step
   toward one of the other two.
-- **Promotion into `01-modules/` or `03-use-cases/`**, decided by the lab, not
+- **Promotion into `01-modules/`**, decided by the lab, not
   self-serve. `01-modules/` is not closed to new work — it is a destination:
   if something in `02-experiments/` is a better reference way to do a stage,
   the lab promotes it into the relevant `01-modules/` notebook, crediting the
-  original folder and its author in the commit and in `CONTRIBUTORS.md`. A
-  finished, demoable application is promoted into `03-use-cases/` instead.
-  Either way, open a PR against `02-experiments/` first — `01-modules/` and
-  `03-use-cases/` change only as promotions, reviewed with extra care because
-  every stage folder is read by newcomers as the reference implementation.
+  original folder and its author in the commit and in `CONTRIBUTORS.md`.
+  Open a PR against `02-experiments/` first — `01-modules/` changes only as a
+  promotion, reviewed with extra care because every stage folder is read by
+  newcomers as the reference implementation.
 
 ## Fork and pull request workflow
 
@@ -92,8 +94,7 @@ public, and one path is one less thing to explain.
 1. **Fork** the repository.
 2. **Branch** from `main` on your fork: `<your-name>/<topic>`, e.g.
    `your-name/handwriting-ocr`.
-3. **Make your changes**, inside your own folder under `02-experiments/` or
-   `03-use-cases/`.
+3. **Make your changes**, inside your own folder under `02-experiments/`.
 4. **Run `nbstripout`** before committing (installed via `pre-commit`, see
    below) so notebook outputs — which can carry a stray key or an identifier
    printed during debugging — never reach the diff.
