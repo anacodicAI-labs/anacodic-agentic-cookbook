@@ -1,5 +1,7 @@
 # Downloaded and derived data never enter git: the cookbook has a 5 MB file
-# ceiling, and each article carries its own licence. Re-create with the scripts.
+# ceiling, and each article carries its own licence. `data` may be a folder or
+# a symlink to the parsed corpus — ignore both forms.
+data
 data/
 __pycache__/
 *.pyc

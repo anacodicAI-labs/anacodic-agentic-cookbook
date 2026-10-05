@@ -1,8 +1,10 @@
-"""Step 3 of 3 — turn COVID-QA answers into gold CHUNK IDs for our chunks.
+"""Step 3 — turn COVID-QA answers into gold CHUNK IDs for our chunks.
 
     python build_gold.py
 
 COVID-QA marks each answer as a span of the article text. Our chunks come from
+the guidelines-generator production pipeline (01 ingest -> 05 derive -> 06 enrich
+-> 03b chunk, profile `covidqa`) at data/03_chunked/covidqa/chunks.jsonl —
 Docling's parse of the PDF, so the text differs slightly (line breaks, hyphens,
 ligatures). For each question we find the chunk(s) holding the answer:
 
@@ -20,6 +22,7 @@ answer relevancy need no gold at all; answer correctness uses gold_answer.
 from __future__ import annotations
 
 import collections
+import csv
 import json
 import re
 import unicodedata
@@ -36,10 +39,18 @@ def norm(s: str) -> str:
 
 
 def main() -> None:
-    chunks = [json.loads(l) for l in open(DATA / "chunks" / "chunk_meta.jsonl")]
+    chunks = [json.loads(l) for l in open(DATA / "03_chunked" / "covidqa" / "chunks.jsonl")]
+    # production paper_slug is the lower-cased PDF stem (pmc2752805) -> COVID-QA doc_index
+    pmc_to_idx = {r["pmcid"].lower(): int(r["doc_index"])
+                  for r in csv.DictReader(open(DATA / "manifest.csv")) if r["status"] == "pdf"}
     by_doc = collections.defaultdict(list)
+    paper_of = {}
     for c in chunks:
-        by_doc[c["doc_index"]].append((c["chunk_id"], norm(c["text"]), set(norm(c["text"]).split())))
+        idx = pmc_to_idx.get(c["paper_slug"])
+        if idx is None:
+            continue
+        paper_of[idx] = c["paper_slug"]
+        by_doc[idx].append((c["chunk_id"], norm(c["text"]), set(norm(c["text"]).split())))
     articles = json.loads((DATA / "COVID-QA.json").read_text())["data"]
 
     (DATA / "gold").mkdir(exist_ok=True)
@@ -47,7 +58,7 @@ def main() -> None:
     with open(DATA / "gold" / "questions.jsonl", "w") as out:
         for idx, cand in by_doc.items():
             para = articles[idx]["paragraphs"][0]
-            paper_id = chunks[[c["doc_index"] for c in chunks].index(idx)]["paper_id"]
+            paper_id = paper_of[idx]
             for qa in para["qas"]:
                 ans = qa["answers"][0]["text"] if qa["answers"] else ""
                 a = norm(ans)

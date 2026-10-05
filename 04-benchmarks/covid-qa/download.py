@@ -1,4 +1,4 @@
-"""Step 1 of 3 — fetch COVID-QA and the original article PDFs.
+"""Step 1 — fetch COVID-QA and the original article PDFs.
 
     python download.py              # everything (~150 PDFs)
     python download.py --limit 5    # a quick pilot
@@ -15,8 +15,8 @@ What it does
   5. Writes data/manifest.csv — one row per article, with the licence and
      the reason when a PDF was not fetched.
 
-Articles without a usable PDF keep their questions: step 2 falls back to the
-article text COVID-QA itself ships, and marks those chunks source="dataset_text".
+Articles without a usable PDF (10 of 147: not in PMC, retracted, or no recorded
+licence) are listed in the manifest with the reason and are not parsed.
 
 Output (all gitignored):  data/COVID-QA.json · data/pdfs/PMC*.pdf · data/manifest.csv
 Source acknowledgement: NIH NLM NCBI PubMed Central (PMC) Article Datasets,
