@@ -37,3 +37,14 @@ each other's work.
 
 Written to [NOTEBOOK_STANDARD.md](../NOTEBOOK_STANDARD.md) when you add notebooks:
 one action per cell, look at the output before the next step.
+
+## Notebooks — read these in order
+
+| # | Notebook | What you do | Needs a key |
+|---|---|---|---|
+| 01 | `01_run_the_experiment.ipynb` | how to run the matrix, and what to record | yes |
+| 02 | `02_analyse_results.ipynb` | accuracy by family, spread, the figure | no |
+| 03 | `03_error_analysis.ipynb` | why the wrong answers were wrong | no |
+
+For background on the data and the agent, read
+`../rashan-table-agent/01_the_data.ipynb` and `04_the_agent.ipynb` first.

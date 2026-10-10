@@ -135,8 +135,34 @@ _AGENTS = {}
 _LOOP = None
 
 
+def _run(coro):
+    """Run a coroutine from either a script or a Jupyter kernel.
+
+    IPython already owns a running event loop, so `loop.run_until_complete`
+    raises "Cannot run the event loop while another loop is running" inside a
+    notebook. When a loop is already running we re-enter it with nest_asyncio;
+    otherwise we use our own persistent loop (the cached AsyncOpenAI client is
+    bound to the loop that created it, so asyncio.run() per call would close it
+    mid-run)."""
+    try:
+        running = asyncio.get_running_loop()
+    except RuntimeError:
+        running = None
+    if running is None:
+        return _loop().run_until_complete(coro)
+    try:
+        import nest_asyncio
+    except ImportError as e:                     # noqa: BLE001
+        raise RuntimeError(
+            "Running inside a notebook requires nest_asyncio "
+            "(pip install nest_asyncio)."
+        ) from e
+    nest_asyncio.apply(running)
+    return running.run_until_complete(coro)
+
+
 def _loop():
-    """One persistent loop for all calls: the cached AsyncOpenAI client is bound
+    """One persistent loop for script use: the cached AsyncOpenAI client is bound
     to the loop that created it, so asyncio.run() per call closes it mid-run."""
     global _LOOP
     if _LOOP is None or _LOOP.is_closed():
@@ -202,8 +228,7 @@ def run_agent(question: str, table_csv: str, table_aware: bool = False,
     last_err = None
     for attempt in range(3):
         try:
-            result = _loop().run_until_complete(
-                Runner.run(agent_obj, prompt, max_turns=8))
+            result = _run(Runner.run(agent_obj, prompt, max_turns=8))
             last_err = None
             break
         except Exception as e:                  # noqa: BLE001
