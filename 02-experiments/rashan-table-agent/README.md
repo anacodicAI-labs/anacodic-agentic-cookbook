@@ -40,3 +40,22 @@ real biomedical/genetics papers. Cached under `data/` — **gitignored, never co
 Written to [NOTEBOOK_STANDARD.md](../NOTEBOOK_STANDARD.md): one action per cell,
 capabilities table first, a "Step N" header before each cell, real output read
 before the next step. Built incrementally.
+
+## Notebooks — read these in order
+
+These are **walkthroughs**: they import the real modules in this folder and drive
+them, rather than re-implementing anything. Written to
+[NOTEBOOK_STANDARD.md](../NOTEBOOK_STANDARD.md) — one action per code cell, a
+"Step N" header before each, and real output read before the next step.
+
+| # | Notebook | What you learn | Needs a key |
+|---|---|---|---|
+| 01 | `01_the_data.ipynb` | what a benchmark item is; lookup vs compute; the label check | no |
+| 02 | `02_scoring.ipynb` | what "correct" means, and three real scorer bugs | no |
+| 03 | `03_baseline.ipynb` | the plain model call the agent must beat | yes |
+| 04 | `04_the_agent.ipynb` | the tools, the tool-call trace, abstention | yes |
+| 05 | `05_the_experiment.ipynb` | repeats, spread, cost — turning answers into a claim | yes |
+
+Outputs are saved so the notebooks can be read without running them. Where a cell
+needs a model and no provider was available at commit time, the cell is left
+unexecuted and the notebook says so at the top.
