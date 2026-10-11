@@ -1,47 +1,66 @@
 # Your first task
 
-**Task:** audit 60 table questions by hand. **Time:** ~2-3 hours.
-**You need:** no coding, no API key.
+**Task:** run the experiment, then analyse it. **Time:** a couple of hours,
+most of it waiting while the run executes.
+**You need:** an OpenAI key in a `.env` file at the repo root.
 
-This is the most important open question in the project right now, and it is
-work only a careful human can do.
+## Read these first (~45 min, no key needed)
 
-## Start here
+The outputs are saved, so you can read them without running anything.
 
-1. Do `SETUP_FIRST.md` once (fork, clone, branch) - 10 minutes, with Rashan.
-2. Open **`audit/AUDIT_INSTRUCTIONS.md`** and follow it. It has the definitions,
-   the rules, and a fully worked example from our real data.
-3. Work through `audit/items.md`, filling in `audit/audit_sheet.csv`.
-4. Write 5-8 sentences of findings in `results/NOTES.md`.
-5. Commit and open a Pull Request.
-
-## Why this is your contribution
-
-We are measuring whether an AI agent can answer questions whose answers live in
-tables. We already found a case where the benchmark's "correct" answer (48)
-cannot be obtained from the table it gives us (which supports 46). If that is
-common, every accuracy number in the study is partly measuring bad labels rather
-than a bad model.
-
-Nobody can settle that with code - it needs a person to read each table and
-judge. Your audit decides how the whole paper reports its results, which is why
-it is a first-author contribution.
-
-## Optional, afterwards
-
-`analyze_results.py` turns result CSVs into accuracy tables and a figure:
-
-```bash
-python 02-experiments/laasya-table-eval/analyze_results.py
+```
+../rashan-table-agent/01_the_data.ipynb    what the task is, and the two kinds of question
+../rashan-table-agent/04_the_agent.ipynb   what the agent actually does
 ```
 
-It already runs on a real sample in `results-input/`. Later you will own the
-accuracy-by-question-type tables and figures for the paper.
+## Then work through your own notebooks, in order
+
+| # | Notebook | What you produce |
+|---|---|---|
+| 01 | `01_run_the_experiment.ipynb` | `results/*.csv` from the real run |
+| 02 | `02_analyse_results.ipynb` | accuracy tables + the figure |
+| 03 | `03_error_analysis.ipynb` | why the wrong answers were wrong |
+
+## The five tasks
+
+```
+ 1. RUN             baseline vs cot vs agent on 50 Biology questions
+ 2. ANALYSE         accuracy per setting, split Lookup vs Compute,
+                    reported as mean +/- spread, plus the bar figure
+ 3. ERROR ANALYSIS  sort the wrong answers into label_wrong / wrong_cell /
+                    math_error / format_only / unanswerable  (human judgement)
+ 4. TRANSFER        the same comparison on CompSci, to show it is not
+                    biology-only
+ 5. WRITE           the Results section and the evaluation half of Methods
+```
+
+Steps 1-3 map onto your three notebooks. Step 4 is step 1 again with
+`--domain CompSci`. Step 5 is writing.
+
+## Where to run what
+
+```
+ JUPYTER    good for a small smoke test (2-5 questions) to confirm your key
+            works, and for all the analysis (notebooks 02 and 03).
+ TERMINAL   better for the full run. It streams progress, survives, and is
+            easy to restart. A notebook buffers subprocess output, so you
+            would stare at a blank cell, and a kernel restart loses the run.
+```
+
+## What "done" looks like
+
+```
+ · results/*.csv committed for all three settings, three repeats each
+ · an accuracy table split by Lookup and Compute, with spreads
+ · one figure: accuracy by question type
+ · the error-category counts from step 3
+ · the CompSci comparison from step 4
+ · a Results section draft
+```
 
 ## The one rule
 
 > Only edit files inside `laasya-table-eval/`. Never change anyone else's folder.
 
-That is what lets several people work in the same repository without breaking
-each other's work. Nothing you do here can damage the project, and nothing is
-final until a Pull Request is reviewed.
+Ask Rashan whenever something is unclear. Ambiguous cases are findings, not
+mistakes - write them down rather than guessing.
