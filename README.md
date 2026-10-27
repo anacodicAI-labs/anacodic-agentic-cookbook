@@ -99,6 +99,8 @@ runnable code — not a scaffold — and its own `requirements.txt`.
 |---|---|---|---|---|
 | 1 | [amaresh-eval-harness](02-experiments/amaresh-eval-harness/) | Amaresh Hebbar | 06-bench | model comparison 0.94 vs 0.95 (tied); extraction quality leaderboard |
 | 2 | [maanas-chunking-eval](02-experiments/maanas-chunking-eval/) | Sai Maanas | 02-chunk | Docling Hybrid (512 tok) keeps tables intact; fixed/semantic lose the header at small budgets |
+| 3 | [amaresh-covidqa-retrieval](02-experiments/amaresh-covidqa-retrieval/) | Amaresh Hebbar | 04-retrieve | COVID-QA, 1,840 Qs: BM25 best (nDCG@10 0.466 with decoys); bge-small 0.348; hybrid tied with BM25 |
+| 4 | [amaresh-embedder-comparison](02-experiments/amaresh-embedder-comparison/) | Amaresh Hebbar | 03-embed | MedCPT below bge-small (nDCG@10 0.249 vs 0.348 with decoys); no hybrid beats BM25 |
 
 Add your own folder under `02-experiments/` — that is the one door in for new
 work, and where every contribution starts. See

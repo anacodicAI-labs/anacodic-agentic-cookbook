@@ -15,6 +15,7 @@ regardless of whether they are still active in the lab.
 | Name | Contribution | Folder |
 |---|---|---|
 | Amaresh Hebbar | repeated-trial eval harness + corpus extraction-quality benchmark | `02-experiments/amaresh-eval-harness/` |
+| Amaresh Hebbar | COVID-QA retrieval benchmark (BM25, dense, HNSW, hybrid) + embedder comparison | `02-experiments/amaresh-covidqa-retrieval/`, `02-experiments/amaresh-embedder-comparison/` |
 | Sai Maanas | chunking strategies benchmark — 3 chunkers × 7 data types, structure-integrity checks | `02-experiments/maanas-chunking-eval/` |
 
 To add yourself: once a pull request from `02-experiments/` or

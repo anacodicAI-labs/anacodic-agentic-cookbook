@@ -9,7 +9,7 @@ Which embedding model finds the right chunk best on the ClinicalSearch style cor
 ### 1. Setup (once)
 
 ```bash
-cd 02-experiments/amaresh_embedder_comparison
+cd 02-experiments/amaresh-embedder-comparison
 python3 -m venv .venv
 source .venv/bin/activate
 pip install bm25s faiss-cpu sentence-transformers transformers huggingface_hub pandas matplotlib requests python-dotenv jupyter nbconvert ipykernel
@@ -104,7 +104,7 @@ Each embedder is tested alone (`dense`) and combined with keyword search (`hybri
 
 ## Why
 
-The first benchmark (`02-experiments/amaresh_new_eval_10th_oct`) showed:
+The first benchmark (`02-experiments/amaresh-covidqa-retrieval`) showed:
 
 * BM25 (keyword search) beat the dense embedder BGE small by about 0.12 to 0.15 nDCG@10
 * the weak embedder was also pulling hybrid search down
