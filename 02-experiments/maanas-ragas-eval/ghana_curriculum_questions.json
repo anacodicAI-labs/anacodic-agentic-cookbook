@@ -1,0 +1,262 @@
+[
+  {
+    "id": "math-b4-01",
+    "input": {
+      "question": "For Basic 4 whole numbers, what range of quantities should learners model, and what place-value materials does the curriculum suggest?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 4",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [23],
+      "content_standard": "B4.1.1.1"
+    }
+  },
+  {
+    "id": "math-b4-02",
+    "input": {
+      "question": "What multiplication-fact range should Basic 4 learners recall, and how does the curriculum illustrate modeling a multiplication fact with line intersections?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 4",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [35],
+      "content_standard": "B4.1.2.1"
+    }
+  },
+  {
+    "id": "math-b4-03",
+    "input": {
+      "question": "How does the Basic 4 curriculum use a hundred chart to help learners identify and describe skip-counting patterns?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 4",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [51],
+      "content_standard": "B4.2.1.1"
+    }
+  },
+  {
+    "id": "math-b5-01",
+    "input": {
+      "question": "In Basic 5, what is the whole-number place-value range learners should model, and what values do the example multi-base blocks represent?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 5",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [76],
+      "content_standard": "B5.1.1.1"
+    }
+  },
+  {
+    "id": "math-b5-02",
+    "input": {
+      "question": "How far should Basic 5 learners be able to read and write whole numbers in figures and words?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 5",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [77],
+      "content_standard": "B5.1.1.1"
+    }
+  },
+  {
+    "id": "math-b5-03",
+    "input": {
+      "question": "How does the Basic 5 number-chart activity use multiples of 1,500 to help learners locate numbers around a chosen value?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 5",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [78],
+      "content_standard": "B5.1.1.1"
+    }
+  },
+  {
+    "id": "math-b6-01",
+    "input": {
+      "question": "What is the upper limit for multi-digit whole-number quantities in the Basic 6 place-value standard?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 6",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [135],
+      "content_standard": "B6.1.1.1"
+    }
+  },
+  {
+    "id": "math-b6-02",
+    "input": {
+      "question": "How far should Basic 6 learners be able to read and write whole numbers in figures and words?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 6",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [136],
+      "content_standard": "B6.1.1.1"
+    }
+  },
+  {
+    "id": "math-b6-03",
+    "input": {
+      "question": "How does the Basic 6 number-chart activity use multiples of 1,500 to help learners locate numbers around a chosen value?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 6",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [137],
+      "content_standard": "B6.1.1.1"
+    }
+  },
+  {
+    "id": "math-b6-04",
+    "input": {
+      "question": "How does the Basic 6 curriculum expect learners to compare and order whole numbers, including the symbols they should use?"
+    },
+    "metadata": {
+      "subject": "Mathematics",
+      "grade": "Basic 6",
+      "source_pdf": "MATHS-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [138],
+      "content_standard": "B6.1.1.1"
+    }
+  },
+  {
+    "id": "science-b4-01",
+    "input": {
+      "question": "Which four animal groups should Basic 4 learners use when classifying animals in the curriculum activity?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 4",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [24],
+      "content_standard": "B4.1.1.1"
+    }
+  },
+  {
+    "id": "science-b4-03",
+    "input": {
+      "question": "What does the Basic 4 mixtures indicator ask learners to investigate about liquid-liquid mixtures and separating their components?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 4",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [26],
+      "content_standard": "B4.1.2.2"
+    }
+  },
+  {
+    "id": "science-b4-04",
+    "input": {
+      "question": "Which examples of recurring movement does the Basic 4 curriculum use when teaching cyclic events in the environment?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 4",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [27],
+      "content_standard": "B4.2.1.1"
+    }
+  },
+  {
+    "id": "science-b4-05",
+    "input": {
+      "question": "Which water sources and water-safety methods are included in the Basic 4 activity about making water safe for use?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 4",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [28],
+      "content_standard": "B4.2.1.5"
+    }
+  },
+  {
+    "id": "science-b5-01",
+    "input": {
+      "question": "Which life processes does the Basic 5 curriculum identify for learners to know?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 5",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [39],
+      "content_standard": "B5.1.1.1"
+    }
+  },
+  {
+    "id": "science-b5-02",
+    "input": {
+      "question": "Which observable properties should Basic 5 learners use to classify everyday materials?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 5",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [40],
+      "content_standard": "B5.1.2.1"
+    }
+  },
+  {
+    "id": "science-b5-03",
+    "input": {
+      "question": "What does the Basic 5 curriculum ask learners to demonstrate about forming and separating solid-liquid and liquid-liquid mixtures?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 5",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [41],
+      "content_standard": "B5.1.2.3"
+    }
+  },
+  {
+    "id": "science-b6-01",
+    "input": {
+      "question": "How does the Basic 6 curriculum ask learners to classify plants by root system, and which example plants are suggested for investigation?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 6",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [56],
+      "content_standard": "B6.1.1.1"
+    }
+  },
+  {
+    "id": "science-b6-02",
+    "input": {
+      "question": "What relationship between Earth and the Sun should Basic 6 learners describe, and what investigative comparison does the curriculum suggest?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 6",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [58],
+      "content_standard": "B6.2.1.1"
+    }
+  },
+  {
+    "id": "science-b6-03",
+    "input": {
+      "question": "Which everyday uses of metals should Basic 6 learners investigate, and how should they connect those uses to metal properties?"
+    },
+    "metadata": {
+      "subject": "Science",
+      "grade": "Basic 6",
+      "source_pdf": "SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+      "source_pages": [57],
+      "content_standard": "B6.1.2.1"
+    }
+  }
+]
