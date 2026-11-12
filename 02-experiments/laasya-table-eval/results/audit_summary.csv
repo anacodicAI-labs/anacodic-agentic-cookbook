@@ -1,0 +1,13 @@
+Measure,Classification,Count,Percentage
+Table answerability,yes,46,76.67
+Table answerability,no,10,16.67
+Table answerability,partial,3,5.0
+Table answerability,blank,1,1.67
+Gold answer correctness,yes,46,76.67
+Gold answer correctness,no,10,16.67
+Gold answer correctness,unsure,3,5.0
+Gold answer correctness,blank,1,1.67
+Model error category,blank,44,73.33
+Model error category,label_wrong,12,20.0
+Model error category,wrong_cell,3,5.0
+Model error category,other,1,1.67

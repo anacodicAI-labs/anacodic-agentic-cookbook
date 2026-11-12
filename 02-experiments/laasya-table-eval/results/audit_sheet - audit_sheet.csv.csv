@@ -1,0 +1,61 @@
+item_id,question_short,gold,gold_in_table__yes_no_partial,gold_looks_correct__yes_no_unsure,why_model_wrong__category,notes_optional
+item_001,What percentage of oocytes tested in the category 'Female carriers of,6.66%,yes,yes,,
+item_002,How many oocytes with Simple Errors were contributed by donors in the,1,yes,yes,,
+item_003,What percentage of oocytes tested had Simple Errors in the category 'F,0%,yes,yes,,
+item_004,How many oocytes tested had premeiotic aneuploidy in total?,25,yes,yes,,
+item_005,What is the average Effect value for all entries in the table?,-0.06,no,no,label_wrong,"gold value is -0.06, table value is -0.045, models report different values"
+item_006,What is the percentage of oocytes with premeiotic aneuploidy in the ca,14.50%,yes,yes,,
+item_007,How many oocytes with Simple Errors were contributed by donors in the,3,yes,yes,,
+item_008,What percentage of oocytes with premeiotic aneuploidy were tested in t,4.30%,yes,yes,wrong_cell,2 of the 3 models answered correctly - agent reported wrong percentage
+item_009,What is the forward primer sequence for Exon 3 & Exon 4?,ACGTAGTGCATACACCCTTG,yes,yes,,
+item_010,What is the reverse primer sequence for Exon 2?,GGAAAAGCCAAATCTAAGGTTCC,yes,yes,,
+item_011,Which region has the forward primer sequence 'GAAACCTAATAAAGCTCCACCTTC,Promoter & Exon 1,yes,yes,,
+item_012,What is the forward primer sequence for Exon 5?,GAAACAGGTTTCCTTTCCCAAG,yes,yes,,
+item_013,What is the reverse primer sequence for Promoter & Exon 1?,TTGCTCAGCATATATCTGGGGC,yes,yes,,
+item_014,What is the p-value for the gene Zinc finger protein 492?,1.30E-06,yes,yes,,
+item_015,"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ tra",-2.28,yes,yes,other,all 3 models neglected the negative sign - printed 2.28
+item_016,What is the Gene Symbol for the gene with a p-value of 8.53E-03?,EGR4,partial,unsure,,should EGR4 be considered the same as Early Growth Response 4?
+item_017,Which gene has the highest Fold Change (FC) magnitude in this table?,CD24,partial,unsure,label_wrong,"the model just states CD24, while there's more in the table - plus for this question should the Probe ID be differentiated?"
+item_018,What is the Gene Name associated with the gene symbol THOP?,Thimet oligopeptidase I,yes,yes,,
+item_019,What is the current treatment for patient E1?,Steroids,yes,yes,,
+item_020,How many donors contributed oocytes with premeiotic aneuploidy in the,2 donors,yes,yes,,
+item_021,What percentage of oocytes tested in the category of Females at increa,0%,yes,yes,,
+item_022,How many oocytes had Simple (SE) Errors in the category of Female carr,1,yes,yes,,
+item_023,What was the total number of oocytes with premeiotic aneuploidy in the,25,yes,yes,,
+item_024,How many donors contributed oocytes with premeiotic aneuploidy in the,15 donors,yes,yes,,
+item_025,What is the Lipid species for the SNP rs201385366?,LPE(22:6;0),yes,yes,,
+item_026,What is the Effect for the SNP rs534693155?,1.24,yes,yes,,
+item_027,What is the Position for the SNP rs11570891?,330388:10:00,,,,gold on csv doesn't match the one in item.md
+item_028,What is the Gene for the SNP rs140645847?,SHTN1,yes,yes,,
+item_029,What is the P value for the SNP rs10790495?,2.1 x 10-8,yes,yes,,
+item_030,How many donors contributed oocytes with premeiotic aneuploidy in the,6 donors,yes,yes,,
+item_031,What percentage of oocytes tested in the category 'Primary/secondary f,12.50%,yes,yes,,
+item_032,How many oocytes had Simple (SE) Errors in the category 'Oocyte preser,1(SE),yes,yes,,
+item_033,Which category had the highest percentage of oocytes with Simple (SE),Female fertility status unknown,yes,yes,,
+item_034,What is the total number of oocytes tested in the category 'Primary/se,48,yes,yes,,
+item_035,What is the total number of variants with pre-existing personal and/or,30,yes,yes,,
+item_036,What percentage of variants in the 'Non-actionable genes' category hav,28%,no,no,label_wrong,table listed percentage as 31.8% - only 1 model scored correctly - rest + gold scored incorrectly
+item_037,How many variants in the 'Others' category have heterozygous variants,1,yes,yes,wrong_cell,only one model scored correctly - rest got it incorrect
+item_038,What percentage of 'Total' variants have analysis criteria not identif,22.70%,partial,unsure,label_wrong,models got it incorrect - the question doesn't specifiy the category
+item_039,How many variants in the 'MITF' gene have incidental variants?,4,yes,yes,,
+item_040,"What is the total number of cows on farms A, B, and C?",39,no,no,label_wrong,models answered correctly - gold value is incorrect
+item_041,What is the total number of observations for all farms in the table?,129,yes,yes,,
+item_042,What is the total number of variables included in non-invasive measure,51,no,no,label_wrong,both the models and the gold values don't match the table value
+item_043,What is the total number of variables included in invasive measurement,15,yes,yes,wrong_cell,gold is correct - models answered incorrectly (2/3)
+item_044,What is the average number of variables included in the invasive measu,3,no,no,label_wrong,models match table - gold answer is different
+item_045,What is the difference between the total number of variables in non-in,36,no,no,label_wrong,none of the models answered correctly - 3/3 models and gold values were incorrect
+item_046,How many variants were identified in the gene BRCA1?,7,yes,yes,,
+item_047,What percentage of variants in BRCA2 were known before EXOMA?,26.70%,yes,yes,,
+item_048,How many variants with pre-existing personal and/or family criteria fo,2,no,no,label_wrong,"model matched gold, but that wasn't found in the table"
+item_049,How many incidental variants were found in the gene MUTYH?,NA,yes,yes,,consider 'NA' to be the same as 'N/A'
+item_050,What percentage of variants in CHEK2 were non-actionable?,28.60%,no,no,label_wrong,"model answered incorrectly, gold had incorrect value"
+item_051,What is the average number of observations per farm?,10,no,no,label_wrong,model answered correctly (matched table) - gold has incorrect value
+item_052,What is the total number of cows on all farms?,1513,yes,yes,,
+item_053,How many equations include the variable 'Age'?,14,yes,yes,,
+item_054,"How many equations include the variable 'Blood pressure, Systolic'?",4,yes,yes,,
+item_055,How many equations include the variable 'BMI'?,11,yes,yes,,
+item_056,How many equations include the variable 'Fasting glucose'?,5,yes,yes,,
+item_057,How many equations include the variable 'Height'?,3,yes,yes,,
+item_058,What is the equation for LDL quantification in the LDLPuavilai study u,TC HDL - (TG / 6),no,no,label_wrong,model answered correctly (matched table) - gold has incorrect value
+item_059,How many subjects had TG > 400 mg/dL in the LDLde Cordova study?,470 subjects,yes,yes,,
+item_060,What is the equation for LDL quantification in the LDLChoi study using,TC 0.87 X HDL 0.13 TG,yes,yes,,
