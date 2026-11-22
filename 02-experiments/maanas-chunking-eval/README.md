@@ -122,3 +122,19 @@ chunking one.
 Next: the same three rows with a dense retriever, Recall@5 on table questions
 only, and a parent-child variant (search small chunks, return the parent
 section).
+
+### Notebook 04: dense search, table questions, parent-child (starter)
+
+`04-dense-tables-parent-child.ipynb` runs end to end on CPU and has `YOUR TURN`
+cells for the stronger models. First run (Recall@5, 1,852 questions):
+
+| Check | Result |
+|---|---|
+| BM25, Docling plain vs labelled | 67.8% vs 68.2% (tie) |
+| Dense (`all-MiniLM-L6-v2`), plain vs labelled | 38.6% vs 37.5% (tie; the label does not help this small model) |
+| Table questions only, plain vs labelled | 68.3% vs 70.0% (borderline, CI touches zero) |
+| Parent-child (search 256-token chunks, return the section) vs labelled 512 | 72.2% vs 68.2%, +4.0 pts, 95% CI [+2.8, +5.3] |
+
+The parent-child gain comes partly from handing the reader more text; report the
+parent size next to it. Part D writes `docling_512_label.jsonl` into the gitignored
+`04-benchmarks/covid-qa/data/chunks/` folder for the retrieval notebooks.

@@ -63,3 +63,20 @@ The data is downloaded from the Hugging Face dataset on first run. `COVIDQA_QUES
 
 - The `text_match` relevance view uses a light normaliser (lowercase and whitespace). `04-benchmarks/covid-qa/build_gold.py` also rejoins hyphenated line breaks and strips punctuation, so `text_match` undercounts slightly. The headline `chunk_id` scores are unaffected.
 - Some questions do not name a paper ("What was the purpose of this study?"). They are kept in these numbers; the follow-up experiment, [`amaresh-embedder-comparison`](../amaresh-embedder-comparison/), reports both the full and the filtered set.
+
+## Notebook 04: retriever upgrade, one stage at a time (starter)
+
+`04-retriever-upgrade.ipynb` builds BM25 → dense → RRF → cross-encoder reranker on
+the labelled Docling 512 chunks of the 137 question papers (5,912 chunks) and scores
+Recall@5 with a paired bootstrap CI per stage. It runs on CPU with small models and
+has `YOUR TURN` cells for Qwen3-Embedding, a larger reranker and paraphrased questions.
+
+| Row | Recall@5 | vs previous row |
+|---|---|---|
+| 1 BM25 | 68.2% | |
+| 2 dense (`bge-small-en-v1.5`, query prefix on) | 51.8% | −16.4 pts vs BM25 |
+| 3 RRF (1 + 2) | 66.3% | −1.9 pts vs BM25 |
+| 4 + reranker (`ms-marco-MiniLM-L-6-v2`, top 20, 300-question sample) | 77.7% | +9.7 pts vs RRF on the same sample, 95% CI [+5.3, +14.0] |
+
+The reranker is the first stage that clearly moves Recall@5 toward the ~94% ceiling.
+Row 4 is a CPU sample; the full 1,852-question run with a larger reranker is the next step.
