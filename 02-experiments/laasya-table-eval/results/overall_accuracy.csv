@@ -1,0 +1,4 @@
+config,correct,total,accuracy_percent
+chatgpt_reference,26,40,65.0
+naive,22,40,55.0
+table_aware,23,40,57.5

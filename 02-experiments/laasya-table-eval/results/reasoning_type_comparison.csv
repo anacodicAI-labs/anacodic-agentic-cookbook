@@ -1,0 +1,13 @@
+reasoning_type,chatgpt_reference,naive,table_aware
+Arithmetic,25.0,25.0,33.33
+Calculation,66.67,0.0,0.0
+Cell Selection,100.0,88.89,88.89
+Count,0.0,100.0,100.0
+Counting,75.0,75.0,50.0
+Identification,100.0,100.0,100.0
+Max Value Identification,100.0,100.0,100.0
+Most Common,100.0,0.0,0.0
+Percentage Calculation,0.0,0.0,0.0
+Percentage calculation,100.0,75.0,100.0
+Summation,100.0,100.0,100.0
+Total count,50.0,50.0,50.0

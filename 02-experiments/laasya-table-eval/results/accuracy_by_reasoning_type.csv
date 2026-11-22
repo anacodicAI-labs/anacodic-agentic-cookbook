@@ -1,0 +1,37 @@
+reasoning_type,correct,total,accuracy_percent,config
+Arithmetic,3,12,25.0,chatgpt_reference
+Arithmetic,3,12,25.0,naive
+Arithmetic,4,12,33.33,table_aware
+Calculation,2,3,66.67,chatgpt_reference
+Calculation,0,3,0.0,naive
+Calculation,0,3,0.0,table_aware
+Cell Selection,9,9,100.0,chatgpt_reference
+Cell Selection,8,9,88.89,naive
+Cell Selection,8,9,88.89,table_aware
+Count,0,1,0.0,chatgpt_reference
+Count,1,1,100.0,naive
+Count,1,1,100.0,table_aware
+Counting,3,4,75.0,chatgpt_reference
+Counting,3,4,75.0,naive
+Counting,2,4,50.0,table_aware
+Identification,1,1,100.0,chatgpt_reference
+Identification,1,1,100.0,naive
+Identification,1,1,100.0,table_aware
+Max Value Identification,1,1,100.0,chatgpt_reference
+Max Value Identification,1,1,100.0,naive
+Max Value Identification,1,1,100.0,table_aware
+Most Common,1,1,100.0,chatgpt_reference
+Most Common,0,1,0.0,naive
+Most Common,0,1,0.0,table_aware
+Percentage Calculation,0,1,0.0,chatgpt_reference
+Percentage Calculation,0,1,0.0,naive
+Percentage Calculation,0,1,0.0,table_aware
+Percentage calculation,4,4,100.0,chatgpt_reference
+Percentage calculation,3,4,75.0,naive
+Percentage calculation,4,4,100.0,table_aware
+Summation,1,1,100.0,chatgpt_reference
+Summation,1,1,100.0,naive
+Summation,1,1,100.0,table_aware
+Total count,1,2,50.0,chatgpt_reference
+Total count,1,2,50.0,naive
+Total count,1,2,50.0,table_aware
