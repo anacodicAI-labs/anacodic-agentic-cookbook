@@ -13,6 +13,7 @@ runs/
 .cache/
 data/uploads/
 data/raw/
+/02-experiments/maanas-chunkingOnMultipleFiles/data/
 
 # Python
 __pycache__/
