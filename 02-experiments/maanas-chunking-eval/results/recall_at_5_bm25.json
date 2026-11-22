@@ -1,0 +1,24 @@
+{
+  "n_questions": 1852,
+  "n_papers": 137,
+  "rows": [
+    {
+      "chunker": "fixed_512",
+      "chunks": 4970,
+      "recall_at_5": 0.6755,
+      "answer_findable": 0.9417
+    },
+    {
+      "chunker": "docling_512",
+      "chunks": 5912,
+      "recall_at_5": 0.6776,
+      "answer_findable": 0.9433
+    },
+    {
+      "chunker": "docling_512_label",
+      "chunks": 5912,
+      "recall_at_5": 0.682,
+      "answer_findable": 0.9433
+    }
+  ]
+}

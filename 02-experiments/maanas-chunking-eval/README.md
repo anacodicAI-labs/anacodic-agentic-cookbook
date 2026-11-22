@@ -93,3 +93,32 @@ recognises both serializations and returns `None` when nothing is measured.
 A re-run of `01-modules/.../02-token-aware-chunking.ipynb` was dropped from the
 PR (outputs only).
 
+
+## COVID-QA: from chunk structure to retrieval
+
+Two notebooks take the comparison from the one-document fixture to the
+COVID-QA benchmark (137 papers, 1,852 expert questions, data from
+`anacodicai-labs/covidqa-bench`).
+
+| Notebook | Question | Setup |
+|---|---|---|
+| `02-covidqa-intrinsic-metrics.ipynb` | Do chunks keep answers whole, keep table headers, carry a section path? | pilot on 5 papers; details in `README_covidqa.md` |
+| `03-recall-at-5-bm25.ipynb` | When the chunker changes, does the right chunk come back in the top 5? | all 137 papers, BM25 fixed, paired bootstrap CI |
+
+Recall@5 with BM25 (all 1,852 questions):
+
+| Chunker | Chunks | Recall@5 | Answer whole in some chunk |
+|---|---|---|---|
+| fixed 512 (recursive, 50 overlap) | 4,970 | 67.5% | 94.2% |
+| Docling `HybridChunker` 512 | 5,912 | 67.8% | 94.3% |
+| Docling 512 + title and heading label | 5,912 | 68.2% | 94.3% |
+
+Every paired difference has a 95% CI that crosses zero, so on text questions
+with BM25 the three chunkers tie. About 6% of answers are split by every
+chunker; most of the remaining misses are answers that sit whole in a chunk
+BM25 did not rank in the top 5, which is a retrieval problem rather than a
+chunking one.
+
+Next: the same three rows with a dense retriever, Recall@5 on table questions
+only, and a parent-child variant (search small chunks, return the parent
+section).
